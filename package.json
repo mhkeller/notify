@@ -1,0 +1,36 @@
+{
+  "name": "@mhkeller/notify",
+  "version": "1.0.0",
+  "description": "Simple, colorful console notifications.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "Michael Keller",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "clean-stack": "^5.1.0",
+    "node-notifier": "^10.0.1",
+    "underscore": "^1.13.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "eslint-config-semistandard": "^17.0.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "strip-ansi": "^7.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhkeller/notify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mhkeller/notify/issues"
+  },
+  "homepage": "https://github.com/mhkeller/notify#readme"
+}

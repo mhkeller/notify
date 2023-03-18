@@ -41,7 +41,9 @@ export default function notify (notification) {
 
   const prefix = constructPrefix(defaults, display);
 
-  // Apply our styles, with some error checking
+  /**
+   * Style messages
+   */
   const styledMsg = applyChalkStyles(mNormal, display.messageStyle);
   const styledValue = applyChalkStyles(vNormal, display.valueStyle);
 

@@ -3,7 +3,7 @@ import notifier from 'node-notifier';
 import cS from 'clean-stack';
 import stripAnsi from 'strip-ansi';
 
-import defaults from './defaults.js';
+import notifyDefaults from './defaults.js';
 
 import applyChalkStyles from './lib/applyChalkStyles.js';
 import constructPrefix from './lib/constructPrefix.js';
@@ -20,10 +20,15 @@ import getDisplay from './lib/getDisplay.js';
   @param {Object} [notification.error] An optional error object to log out
   @param {Boolean} [notification.k = false] Send a desktop notification
 */
-export default function notify (notification) {
+export default function notify (notification, dflts = {}) {
   if (!isObject(notification)) {
     notify({ m: 'Input must be an object', d: 'error' });
   }
+
+  /**
+   * Allow extension of defaults, useful for testing
+   */
+  const defaults = { ...notifyDefaults, ...dflts };
 
   const { m = '', v = '', d = '', error = false, k } = notification;
 

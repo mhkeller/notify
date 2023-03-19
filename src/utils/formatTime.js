@@ -22,10 +22,11 @@ export default function formatTime (milliseconds) {
   const oneHour = 3600000;
   const oneMinute = 60000;
   const oneSecond = 1000;
-  const seconds = 0;
-  const minutes = 0;
-  const hours = 0;
-  const result = '';
+
+  let seconds = 0;
+  let minutes = 0;
+  let hours = 0;
+  let result = '';
   if (milliseconds === 0) {
     return '0ms';
   }
@@ -69,4 +70,4 @@ export default function formatTime (milliseconds) {
   }
 
   return result;
-};
+}

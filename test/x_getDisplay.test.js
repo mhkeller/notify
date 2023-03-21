@@ -33,9 +33,20 @@ const rows = [
   { args: [defaults, ['bold', 'blue'], ''], expected: { ...defaults.baseDisplay, messageStyle: ['bold', 'blue'], desktop: false } },
 
   // Setting an object
-
+  { args: [defaults, { messageStyle: 'red' }, ''], expected: { ...defaults.baseDisplay, messageStyle: 'red' } },
+  { args: [defaults, { messageStyle: 'bold' }, ''], expected: { ...defaults.baseDisplay, messageStyle: 'bold' } },
+  { args: [defaults, { messageStyle: ['red'] }, ''], expected: { ...defaults.baseDisplay, messageStyle: ['red'] } },
+  { args: [defaults, { messageStyle: ['bold'] }, ''], expected: { ...defaults.baseDisplay, messageStyle: ['bold'] } },
+  { args: [defaults, { messageStyle: ['bold', 'blue'] }, ''], expected: { ...defaults.baseDisplay, messageStyle: ['bold', 'blue'] } },
 
   // Setting an object and desktop
+  { args: [defaults, { messageStyle: 'red' }, true], expected: { ...defaults.baseDisplay, messageStyle: 'red', desktop: true } },
+  { args: [defaults, { messageStyle: 'bold' }, false], expected: { ...defaults.baseDisplay, messageStyle: 'bold', desktop: false } },
+  { args: [defaults, { messageStyle: ['red'] }, {}], expected: { ...defaults.baseDisplay, messageStyle: ['red'], desktop: false } },
+  { args: [defaults, { messageStyle: ['bold'] }, []], expected: { ...defaults.baseDisplay, messageStyle: ['bold'], desktop: false } },
+  { args: [defaults, { messageStyle: ['bold', 'blue'] }, ''], expected: { ...defaults.baseDisplay, messageStyle: ['bold', 'blue'], desktop: false } },
+
+  // more display options
 ];
 
 describe(name, () => {

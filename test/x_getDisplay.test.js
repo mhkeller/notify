@@ -31,6 +31,11 @@ const rows = [
   { args: [defaults, ['red'], {}], expected: { ...defaults.baseDisplay, messageStyle: ['red'], desktop: false } },
   { args: [defaults, ['bold'], []], expected: { ...defaults.baseDisplay, messageStyle: ['bold'], desktop: false } },
   { args: [defaults, ['bold', 'blue'], ''], expected: { ...defaults.baseDisplay, messageStyle: ['bold', 'blue'], desktop: false } },
+
+  // Setting an object
+
+
+  // Setting an object and desktop
 ];
 
 describe(name, () => {

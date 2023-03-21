@@ -1,7 +1,5 @@
 module.exports = {
-  extends: [
-    'semistandard'
-  ],
+  extends: ['semistandard'],
   rules: {
     quotes: [
       'error',
@@ -9,6 +7,7 @@ module.exports = {
       {
         allowTemplateLiterals: true
       }
-    ]
+    ],
+    'operator-linebreak': ['error', 'after']
   }
 };

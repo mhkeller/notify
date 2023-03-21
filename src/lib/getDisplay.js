@@ -1,4 +1,4 @@
-import { isObject, isBoolean } from 'underscore';
+import isObject from '../utils/isObject.js';
 
 /**
  * If we are passing an object, set the entire display
@@ -9,9 +9,12 @@ function construct (val) {
   if (isObject(val)) {
     return val;
   }
-  return {
-    messageStyle: val
-  };
+  if (val) {
+    return {
+      messageStyle: val
+    };
+  }
+  return {};
 }
 
 export default function getDisplay ({ baseDisplay, displays }, display, desktop) {
@@ -24,9 +27,9 @@ export default function getDisplay ({ baseDisplay, displays }, display, desktop)
     result = construct(displays[display]);
   } else {
     result = construct(display);
-    if (isBoolean(desktop) === true) {
-      result.desktop = desktop;
-    }
+  }
+  if (typeof desktop === 'boolean') {
+    result.desktop = desktop;
   }
   return { ...baseDisplay, ...result };
 }

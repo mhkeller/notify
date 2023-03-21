@@ -1,4 +1,3 @@
-import { isObject } from 'underscore';
 import notifier from 'node-notifier';
 import cS from 'clean-stack';
 import stripAnsi from 'strip-ansi';
@@ -10,6 +9,7 @@ import constructPrefix from './lib/constructPrefix.js';
 import normalize from './lib/normalize.js';
 import print from './lib/print.js';
 import getDisplay from './lib/getDisplay.js';
+import isObject from './utils/isObject';
 
 /**
   Send a notification

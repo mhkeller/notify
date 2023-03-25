@@ -16,7 +16,7 @@ import isObject from './utils/isObject.js';
   @param {Object} notification Settings
   @param {String} notification.m A description
   @param {String} notification.v A specific value
-  @param {String|Array|Object} notification.d The display value. Can be a chalk color name, array of them, or a display object with more settings
+  @param {String|Array|Object} notification.d The display style. Can be a chalk style name, array of chalk styles, the name of a built-in display, or a full display config
   @param {Object} [notification.error] An optional error object to log out
   @param {Boolean} [notification.k = false] Send a desktop notification
 */

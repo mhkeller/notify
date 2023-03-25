@@ -13,7 +13,7 @@ Pass an object to the `notify` function with the following options:
 
 * `m` — `{String}` The message.
 * `v` — `{String}` The value.
-* `d` — `{String|String[]|Object}` Display options. The most common usage of this is to supply one or more [chalk styles](https://github.com/chalk/chalk). See [advanced styling](#advanced-styling) below for more options.
+* `d` — `{String|String[]|Object}` Display options. The display style. Can be a [chalk styles](https://github.com/chalk/chalk) name, array of chalk styles, the name of a built-in display, or a full display config. See [advanced styling](#advanced-styling) below for more information.
 * `k` — `{Boolean}` [false] Whether to show a desktop notification using [node-notifier](https://github.com/mikaelbr/node-notifier)
 * `error` — `{Error}` Pass an error object to get printed out with `console.error` for reference.
 
@@ -114,7 +114,7 @@ Here's the full list of built-in display names:
 
 ## Advanced styling
 
-You can also pass an object to the `d` key. Here are the defalt options:
+You can also pass a display config object to the `d` key. Here are the default options:
 
 ```js
 {

@@ -2,7 +2,7 @@
 ===
 
 [![tests](https://github.com/mhkeller/notify/actions/workflows/node.js.yml/badge.svg)](https://github.com/mhkeller/notify/actions/workflows/node.js.yml)
-[![npm version](https://img.shields.io/npm/v/@mhkeller/notify.svg?style=flat-square)](https://www.npmjs.com/package/@mhkeller/notify)
+[![npm version](https://img.shields.io/npm/v/@mhkeller/notify.svg)](https://www.npmjs.com/package/@mhkeller/notify)
 
 ## Install
 

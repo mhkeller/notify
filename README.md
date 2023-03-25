@@ -33,20 +33,24 @@ notify({ m: 'A notification...', v: 'hello', d: 'magenta' });
 
 The [chalk styles](https://github.com/chalk/chalk) passed to `d` can be a single string, an array of strings or the name of one of the built-in display styles:
 
-```json
+```js
 // String
 notify({ m: 'A notification...', v: 'hello', d: 'cyan' });
-
-// Array of strings
-notify({ m: 'A notification...', v: 'hello', d: ['magenta', 'bold', 'italic', 'underline'] });
-
-// Display name
-notify({ m: 'A notification...', v: 'hello', d: 'header' });
 ```
 
 ![](./assets/cyan.png)
 
+```js
+// Array of strings
+notify({ m: 'A notification...', v: 'hello', d: ['magenta', 'bold', 'italic', 'underline'] });
+```
+
 ![](./assets/magenta-options.png)
+
+```js
+// Display name
+notify({ m: 'A notification...', v: 'hello', d: 'header' });
+```
 
 ![](./assets/header.png)
 
@@ -75,19 +79,35 @@ Here's the full list:
 }
 ```
 
+*`header`*
+
 ![](./assets/header.png)
+
+*`group`*
 
 ![](./assets/group.png)
 
+*`task`*
+
 ![](./assets/task.png)
+
+*`note`*
 
 ![](./assets/note.png)
 
+*`error`*
+
 ![](./assets/error.png)
+
+*`warn`*
 
 ![](./assets/warn.png)
 
+*`change`*
+
 ![](./assets/change.png)
+
+*`success`*
 
 ![](./assets/success.png)
 

@@ -1,7 +1,7 @@
 @mhkeller/notify
 ===
 
-[![Build status](https://img.shields.io/travis/mhkeller/notify/master.svg?style=flat-square)](https://travis-ci.org/mhkeller/notify)
+[![tests](https://github.com/actions/setup-node/actions/workflows/tests.yml/badge.svg)](https://github.com/actions/setup-node/actions/workflows/tests.yml)
 [![npm version](https://img.shields.io/npm/v/@mhkeller/notify.svg?style=flat-square)](https://www.npmjs.com/package/@mhkeller/notify)
 
 ## Install

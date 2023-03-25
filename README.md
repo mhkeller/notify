@@ -79,35 +79,35 @@ Here's the full list:
 }
 ```
 
-*`header`*
+**`header`**
 
 ![](./assets/header.png)
 
-*`group`*
+**`group`**
 
 ![](./assets/group.png)
 
-*`task`*
+**`task`**
 
 ![](./assets/task.png)
 
-*`note`*
+**`note`**
 
 ![](./assets/note.png)
 
-*`error`*
+**`error`**
 
 ![](./assets/error.png)
 
-*`warn`*
+**`warn`**
 
 ![](./assets/warn.png)
 
-*`change`*
+**`change`**
 
 ![](./assets/change.png)
 
-*`success`*
+**`success`**
 
 ![](./assets/success.png)
 

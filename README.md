@@ -11,11 +11,11 @@ npm install --save @mhkeller/notify
 
 Pass an object to the `notify` function with the following options:
 
-* `m` {String} The message.
-* `v` {String} The value.
-* `d` {String|String[]|Object} Display options. The most common usage of this is to supply one or more [chalk styles](https://github.com/chalk/chalk). See [advanced styling](#advanced-styling) below for more options.
-* `k` {Boolean} [false] Whether to show a desktop notification using [node-notifier](https://github.com/mikaelbr/node-notifier)
-* `error` {Error} Pass an error object to get printed out with `console.error` for reference.
+* `m` — `{String}` The message.
+* `v` — `{String}` The value.
+* `d` — `{String|String[]|Object}` Display options. The most common usage of this is to supply one or more [chalk styles](https://github.com/chalk/chalk). See [advanced styling](#advanced-styling) below for more options.
+* `k` — `{Boolean}` [false] Whether to show a desktop notification using [node-notifier](https://github.com/mikaelbr/node-notifier)
+* `error` — `{Error}` Pass an error object to get printed out with `console.error` for reference.
 
 All of these are optional. If you omit either the message or the value, that part of the notification won't appear. If you omit a display, it will use the default which bolds the value portion.
 
@@ -54,7 +54,7 @@ notify({ m: 'A notification...', v: 'hello', d: 'header' });
 
 ![](./assets/header.png)
 
-Here's the full list:
+Here's the full list of built-in display names:
 
 ```js
 {

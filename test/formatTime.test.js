@@ -5,7 +5,7 @@ import fn from '../src/utils/formatTime.js';
 
 const name = 'formatTime';
 
-const rows = [
+const tests = [
   { args: [0], expected: '0ms' },
   { args: [0.1 * 0.2], expected: '0ms' },
   { args: [2], expected: '2ms' },
@@ -43,8 +43,8 @@ const rows = [
 ];
 
 describe(name, () => {
-  rows.forEach(t => {
-    it(`should match expected ${t.args[0]}`, () => {
+  tests.forEach(t => {
+    it(`should match expected ${t.expected}`, () => {
       const actual = fn(t.args[0]);
       assert.equal(actual, t.expected);
     });

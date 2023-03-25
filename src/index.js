@@ -9,7 +9,7 @@ import constructPrefix from './lib/constructPrefix.js';
 import normalize from './lib/normalize.js';
 import print from './lib/print.js';
 import getDisplay from './lib/getDisplay.js';
-import isObject from './utils/isObject';
+import isObject from './utils/isObject.js';
 
 /**
   Send a notification

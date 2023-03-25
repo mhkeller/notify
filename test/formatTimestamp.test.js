@@ -5,7 +5,7 @@ import fn from '../src/utils/formatTimestamp.js';
 
 const name = 'formatTimestamp';
 
-const rows = [
+const tests = [
   { args: [new Date(2017, 0, 1)], expected: '00:00:00.00' },
   { args: [new Date(2017, 0, 1, 11, 33, 30, 0)], expected: '11:33:30.00' },
   { args: [new Date(2017, 0, 1, 11, 33, 30, 50)], expected: '11:33:30.05' },
@@ -21,8 +21,8 @@ const rows = [
 ];
 
 describe(name, () => {
-  rows.forEach((t) => {
-    it(`should match expected ${t.args[0]}`, () => {
+  tests.forEach((t) => {
+    it(`should match expected ${t.expected}`, () => {
       const actual = fn(t.args[0]);
       assert.equal(actual, t.expected);
     });

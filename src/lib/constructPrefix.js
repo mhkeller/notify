@@ -4,8 +4,6 @@
  * This will add any line breaks if they are designated in the display
  * --------------------------------------------
  */
-import * as _ from 'underscore';
-
 import applyChalkStyles from './applyChalkStyles.js';
 
 export default function constructPrefix (defaults, display) {
@@ -21,7 +19,7 @@ export default function constructPrefix (defaults, display) {
   let time;
 
   const customTime = defaults.time;
-  if (_.isFunction(customTime)) {
+  if (typeof customTime === 'function') {
     time = customTime(d);
   } else {
     time = typeof customTime === 'string' ? customTime : String(customTime);

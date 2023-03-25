@@ -6,7 +6,7 @@ import defaults from '../src/defaults.js';
 
 const name = 'getDisplay';
 
-const rows = [
+const tests = [
   // Empty
   { args: [defaults, undefined, undefined], expected: defaults.baseDisplay },
 
@@ -47,10 +47,14 @@ const rows = [
   { args: [defaults, { messageStyle: ['bold', 'blue'] }, ''], expected: { ...defaults.baseDisplay, messageStyle: ['bold', 'blue'], desktop: false } },
 
   // more display options
+  { args: [defaults, { valueStyle: ['italic', 'blue'] }, ''], expected: { ...defaults.baseDisplay, valueStyle: ['italic', 'blue'] } },
+  { args: [defaults, { desktop: false }, false], expected: { ...defaults.baseDisplay } },
+  { args: [defaults, { desktop: false }, true], expected: { ...defaults.baseDisplay, desktop: true } },
+  { args: [defaults, { preString: 'hi' }], expected: { ...defaults.baseDisplay, preString: 'hi' } }
 ];
 
 describe(name, () => {
-  rows.forEach((t) => {
+  tests.forEach((t) => {
     it(`should match expected ${t.args[1]}`, () => {
       const actual = fn(...t.args);
       assert.deepEqual(actual, t.expected);

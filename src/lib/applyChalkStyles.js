@@ -9,14 +9,16 @@ export default function applyChalkStyles (str, styles) {
     styles = [styles];
   }
   // Apply our styles
-  styles.forEach(style => {
-    const s = style.trim();
-    if (chalk[s]) {
-      str = chalk[s](str);
-    } else {
-      throw new TypeError(`Invalid chalk style: "${style}"`);
-    }
-  });
+  styles
+    .map(s => typeof s === 'string' ? s.trim() : s)
+    .filter(Boolean)
+    .forEach((s) => {
+      if (typeof chalk[s] === 'function') {
+        str = chalk[s](str);
+      } else {
+        throw new TypeError(`Invalid chalk style: "${s}"`);
+      }
+    });
 
   return str;
 }

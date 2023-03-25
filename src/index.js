@@ -30,7 +30,7 @@ export default function notify (notification, dflts = {}) {
    */
   const defaults = { ...notifyDefaults, ...dflts };
 
-  const { m = '', v = '', d = '', error = false, k } = notification;
+  const { m = '', v = '', d = '', k, error } = notification;
 
   /**
    * Configure the display object
@@ -42,7 +42,7 @@ export default function notify (notification, dflts = {}) {
    */
   const mNormal = normalize(m);
   const vNormal = normalize(v);
-  const errorNormal = error ? '\n' + cS(error.stack, { pretty: true }) : '';
+  const errorNormal = isObject(error) ? '\n' + cS(error.stack, { pretty: true }) : '';
 
   const prefix = constructPrefix(defaults, display);
 

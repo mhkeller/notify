@@ -28,6 +28,21 @@ const tests = [
   },
   {
     args: [
+      { m: 'hello', v: 'value', d: { messageStyle: ['blue', 'bold'], skipPrefix: true } },
+      { time: '12:00:00.10' }
+    ],
+    expected: '\x1B[1m\x1B[34mhello\x1B[39m\x1B[22m \x1B[1mvalue\x1B[22m'
+  },
+  {
+    args: [
+      { m: 'hello', v: 'value', d: { messageStyle: ['blue', 'bold'], postString: '\n' } },
+      { time: '12:00:00.10' }
+    ],
+    expected:
+      '[\x1B[90m12:00:00.10\x1B[39m | \x1B[1m\x1B[34mnotify\x1B[39m\x1B[22m] \x1B[1m\x1B[34mhello\x1B[39m\x1B[22m \x1B[1mvalue\x1B[22m\n'
+  },
+  {
+    args: [
       { m: 'hello', v: 'value', d: ['red', 'bold', 'underline', 'italic'] },
       { time: '12:00:00.10' }
     ],

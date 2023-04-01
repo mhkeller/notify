@@ -3,7 +3,7 @@ Changelog
 
 ## 1.1.0
 
-> not yet on npm
+> 2023-04-01
 
 Add an `x` prop to allow for easy extensions of shothand displays.
 

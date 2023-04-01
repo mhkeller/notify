@@ -7,6 +7,8 @@ Changelog
 
 Add an `x` prop to allow for easy extensions of shothand displays.
 
+* [4cb1425e47b72c4554e5d0ecd8ac7b4e1bdf016c](https://github.com/mhkeller/notify/commit/4cb1425e47b72c4554e5d0ecd8ac7b4e1bdf016c)
+*
 ## 1.0.1
 
 > 2023-03-27

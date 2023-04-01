@@ -19,6 +19,7 @@ Pass an object to the `notify` function with the following options:
 * `d` — `{String|String[]|Object}` Display options. The display style. Can be a [chalk style](https://github.com/chalk/chalk) name, array of chalk styles, the name of a [built-in display](#built-in-displays) or a [display config](#advanced-styling).
 * `k` — `{Boolean}` [false] Whether to show a desktop notification using [node-notifier](https://github.com/mikaelbr/node-notifier)
 * `error` — `{Error}` Pass an error object to get printed out with `console.error` for reference.
+* `x` — `{Object}` An object that will extend the display. This is useful if you're setting a string or an array of string colors in `d` and you want to extend the display in a quick way.
 
 All of these are optional. If you omit either the message or the value, that part of the notification won't appear. If you omit a display, it will use the default which bolds the value portion.
 

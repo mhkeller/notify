@@ -17,7 +17,7 @@ function construct (val) {
   return {};
 }
 
-export default function getDisplay ({ baseDisplay, displays }, display, desktop) {
+export default function getDisplay ({ baseDisplay, displays }, display, desktop, extension) {
   let result;
   /**
    * Set the display if this is a display name
@@ -31,5 +31,5 @@ export default function getDisplay ({ baseDisplay, displays }, display, desktop)
   if (typeof desktop === 'boolean') {
     result.desktop = desktop;
   }
-  return { ...baseDisplay, ...result };
+  return { ...baseDisplay, ...result, ...extension };
 }

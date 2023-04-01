@@ -1,6 +1,12 @@
 Changelog
 ===
 
+## 1.1.0
+
+> not yet on npm
+
+Add an `x` prop to allow for easy extensions of shothand displays.
+
 ## 1.0.1
 
 > 2023-03-27

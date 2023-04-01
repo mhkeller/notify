@@ -75,6 +75,16 @@ const tests = [
       '[\x1B[90m12:00:00.10\x1B[39m | \x1B[1m\x1B[34mnotify\x1B[39m\x1B[22m] \x1B[1m\x1B[34mhello\x1B[39m\x1B[22m'
   },
   {
+    args: [{ m: 'hello', d: ['blue', 'bold'], x: { preString: '\t' } }, { time: '12:00:00.10' }],
+    expected:
+      '\t[\x1B[90m12:00:00.10\x1B[39m | \x1B[1m\x1B[34mnotify\x1B[39m\x1B[22m] \x1B[1m\x1B[34mhello\x1B[39m\x1B[22m'
+  },
+  {
+    args: [{ m: 'hello', d: ['blue', 'bold'], x: { postString: '\n' } }, { time: '12:00:00.10' }],
+    expected:
+      '[\x1B[90m12:00:00.10\x1B[39m | \x1B[1m\x1B[34mnotify\x1B[39m\x1B[22m] \x1B[1m\x1B[34mhello\x1B[39m\x1B[22m\n'
+  },
+  {
     args: [{ m: 'hello', d: ['blue', 'bold'], k: true }, { time: '12:00:00.10' }],
     expected:
       '[\x1B[90m12:00:00.10\x1B[39m | \x1B[1m\x1B[34mnotify\x1B[39m\x1B[22m] \x1B[1m\x1B[34mhello\x1B[39m\x1B[22m'

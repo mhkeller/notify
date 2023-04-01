@@ -19,6 +19,7 @@ import isObject from './utils/isObject.js';
   @param {String|Array|Object} notification.d The display style. Can be a chalk style name, array of chalk styles, the name of a built-in display, or a full display config
   @param {Object} [notification.error] An optional error object to log out
   @param {Boolean} [notification.k = false] Send a desktop notification
+  @param {Object} [notification.x] Extend shorthand displays with other properties
 */
 export default function notify (notification, dflts = {}) {
   if (!isObject(notification)) {
@@ -30,12 +31,12 @@ export default function notify (notification, dflts = {}) {
    */
   const defaults = { ...notifyDefaults, ...dflts };
 
-  const { m = '', v = '', d = '', k, error } = notification;
+  const { m = '', v = '', d = '', k, error, x = {} } = notification;
 
   /**
    * Configure the display object
    */
-  const display = getDisplay(defaults, d, k);
+  const display = getDisplay(defaults, d, k, x);
 
   /**
    * Normalize json objects, numbers and falsey values

@@ -23,7 +23,8 @@ const tests = [
   { args: [defaults, 'bold', ''], expected: { ...defaults.baseDisplay, messageStyle: 'bold' } },
   { args: [defaults, ['red'], ''], expected: { ...defaults.baseDisplay, messageStyle: ['red'] } },
   { args: [defaults, ['bold'], ''], expected: { ...defaults.baseDisplay, messageStyle: ['bold'] } },
-  { args: [defaults, ['bold', 'blue'], ''], expected: { ...defaults.baseDisplay, messageStyle: ['bold', 'blue'] } },
+  { args: [defaults, ['bold', 'blue'], '', { preString: '\t' }], expected: { ...defaults.baseDisplay, messageStyle: ['bold', 'blue'], preString: '\t' } },
+  { args: [defaults, 'magenta', '', { postString: '\t' }], expected: { ...defaults.baseDisplay, messageStyle: 'magenta', postString: '\t' } },
 
   // Setting colors and desktop
   { args: [defaults, 'red', true], expected: { ...defaults.baseDisplay, messageStyle: 'red', desktop: true } },

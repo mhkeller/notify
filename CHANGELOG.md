@@ -13,7 +13,7 @@ Add the `title` default style
 
 > 2023-04-01
 
-Add an `x` prop to allow for easy extensions of shothand displays.
+Add an `x` prop to allow for easy extensions of shorthand displays.
 
 * [4cb1425e47b72c4554e5d0ecd8ac7b4e1bdf016c](https://github.com/mhkeller/notify/commit/4cb1425e47b72c4554e5d0ecd8ac7b4e1bdf016c)
 *

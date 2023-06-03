@@ -32,6 +32,7 @@ const defaults = {
   },
   displays: {
     default: {},
+    title: ['blue', 'bold', 'underline'],
     header: ['blue', 'bold'],
     group: ['magenta', 'bold'],
     task: ['cyan', 'bold'],

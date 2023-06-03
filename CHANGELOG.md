@@ -3,7 +3,7 @@ Changelog
 
 ## 1.2.0
 
-> Not yet on npm
+> 2023-06-02
 
 Add the `title` default style
 

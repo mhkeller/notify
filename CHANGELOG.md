@@ -1,6 +1,14 @@
 Changelog
 ===
 
+## 1.2.0
+
+> Not yet on npm
+
+Add the `title` default style
+
+* [2522e6c941fff88d6cda4825f0ff410981163c15](https://github.com/mhkeller/notify/commit/2522e6c941fff88d6cda4825f0ff410981163c15)
+
 ## 1.1.0
 
 > 2023-04-01
